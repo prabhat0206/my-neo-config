@@ -19,7 +19,6 @@ return {
                     "pyright",
                     "tsserver",
                     "vimls",
-                    "black",
                 }
             })
         end
