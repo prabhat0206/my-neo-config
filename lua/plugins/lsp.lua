@@ -19,6 +19,8 @@ return {
                     "pyright",
                     "tsserver",
                     "vimls",
+                    "gopls",
+                    "graphql",
                 }
             })
         end
@@ -35,11 +37,13 @@ return {
             lspconfig.html.setup({})
             lspconfig.cssls.setup({})
             lspconfig.lua_ls.setup({})
+            lspconfig.gopls.setup({})
+            lspconfig.graphql.setup({})
 
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
             vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
             vim.keymap.set({ 'n' }, '<leader>ca', vim.lsp.buf.code_action, {})
         end
-    }
+    },
 }
